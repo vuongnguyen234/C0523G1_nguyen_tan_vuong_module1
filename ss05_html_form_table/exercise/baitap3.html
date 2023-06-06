@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Market Research Survey</title>
+</head>
+<body>
+<td> What is your age range?</td><br>
+<select name="age">
+    <option value="1-18">1-18</option>
+    <option value="18-24">18-24</option>
+    <option value="24-40">24-40</option>
+    <option value="40-60">40-60</option>
+</select><br>
+<td> What is your yearly income range?</td><br>
+<select name="money">
+<option value="$0 - $25,000">$0 - $25,000</option>
+<option value="25,000 - $40,000">25,000 - $40,000</option><br>
+</select><br>
+<form action="/action_page.php">
+    Gender <br/>
+    <label><input name="sex" value="male" type="radio" checked/> Nam</label> <br/>
+    <label><input name="sex" value="female" type="radio"/> Nữ</label> <br/>
+    <form action="/action_page.php">
+        Which of the following products have your purchased in the last 2 months. Please check all that apply.<br/>
+        <label><input name="hobby" value="Product 1" type="checkbox"/> Product 1 </label> <br/>
+        <label><input name="hobby" value="Product 2" type="checkbox"/> Product 2</label> <br/>
+        <label><input name="hobby" value="Product 3" type="checkbox"/> Product 3</label> <br/>
+    </form><br>
+    <form action="/action_page.php">
+        How often would you use our neww product ?<br/>
+        <label><input name="hobby" value="Daily" type="radio" checked/> Daily</label> <br/>
+        <label><input name="hobby" value="Weekly" type="radio"/> Weekly</label> <br/>
+        <label><input name="hobby" value="Monthly" type="radio"/> Monthly</label> <br/>
+            What would you pay for the new product?<br>
+        <table>
+        <tr>
+            $<input style="width: 80px;" type="text">
+            <td style="width:100px">Dollars</td>
+            <td>Cents</td>
+        </tr>
+        .<input style="width: 40px;" type="text">
+        </table>
+What features would you like to see in the new product.
+        <textarea cols="50" rows="4"> </textarea>
+    </form>
+</body>
+</html>
