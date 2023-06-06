@@ -4,25 +4,22 @@
     <meta charset="UTF-8">
     <title>Sở thích của bạn</title>
 </head>
-<body>
-<h3 style="background-color: red; text-align: center; font-size: 13px"> SỞ THÍCH CỦA BẠN </h3>
-    <form action="/action_page.php">
-        <table>
+<body style="background-color: aliceblue">
+<div class="container" style="margin-left: 35%;background-color: white;" >
+    <h3 style="background-color: aquamarine;text-align:center"> SỞ THÍCH CỦA BẠN </h3><br>
+    <div class="information-personal" style="padding-left:10%">
+    <table>
             <tr>
-                <td>
-                Họ và tên:
-                <input name="Họ và tên" type="yourname"/><br>
-                </td>
+                <td class="yourname"> Họ và tên :</td>
+                <td colspan="5"><input type="text" required></td>
             </tr>
             <tr>
-                <td>
-                    Email :
-                    <input name="Email" type="text"/>
+                <td>Email:</td>
+                <td colspan="5"><input type="email" name="email" required>
                 </td>
             </tr>
         </table>
-        Sở thích:
-        <input name="Sở thích" type="text"/><br>
+        Sở thích: <br/>
             <label><input name="hobby" value="sport" type="checkbox"/> Thể thao </label>
             <label><input name="hobby" value=" music" type="checkbox"/> Âm nhạc</label>
             <label><input name="hobby" value="reading" type="checkbox"/> Đọc sách</label><br>
@@ -32,8 +29,7 @@
             <label><input name="hobby" value="Movies" type="checkbox"/> Điện ảnh</label> <br/>
         <input type="submit" value="Gửi thông tin"/>
         <input type="reset" value="Nhập lại"/>
-    </form>
-
-</form>
+    </div>
+</div>
 </body>
 </html>
