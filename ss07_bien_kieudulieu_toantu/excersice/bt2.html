@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+<body>
+<table >
+    <tr>
+        <td style="color">Amount</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td> From Currency</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td> To Currency</td>
+    </tr>
+</table>
+<table>
+    <form><br>
+        <input type="text">
+    </form>
+    <select from ="tien te">
+        <option value="VNĐ">VNĐ</option>
+        <option value="USD">USD</option>
+    </select>
+    <select to ="tien te">
+        <option value="VNĐ">VNĐ</option>
+        <option value="USD">USD</option>
+    </select>
+    <button onclick="alert('ketqua')">Convert</button><br>
+    <td>Result :</td>
+    <script>
+        function ketqua(){
+            VNĐ = 23000
+            USA = 1
+            a = document.getElementById("a").value
+            a1 = document.getElementById("a1").value
+            a2 = document.getElementById("a2").value
+            if (a1 == "USD" && a2 == "VND") {
+                result = (a1 * 23000) + " Đ";
+            } else if (a1 == "VND" && a2 == "USD") {
+                result = (a1 / 23000) + " $";
+            } else if (a2 == "VND") {
+                result = a + " Đ"
+            } else {
+                result = a + " $"
+            }
+
+            document.getElementById("result").innerHTML = "<h1>" + result + "</h1>"
+        }
+
+    </script
+
+</table>
+</body>
+</html>

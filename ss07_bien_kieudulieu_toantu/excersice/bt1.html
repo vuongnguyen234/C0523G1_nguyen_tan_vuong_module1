@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Khai báo và sử dụng biến</title>
+    <style>
+        table{width: 400px}
+    </style>
+</head>
+<body>
+<table>
+    <tr>
+        <td colspan="3">Bài 1: ĐIỂM SỐ</td>
+    </tr>
+    <tr>
+        <td><input id="toanid" name="toan" type="number" placeholder="Điểm Toán"></td>
+        <td><input id="lyid" name="ly" type="number" placeholder="Điểm Lý"></td>
+        <td><input id="hoaid" name="hoa" type="number" placeholder="Điểm Hóa"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td align="right"><input name="submit1" type="submit" value="Trung Bình" onclick="tinhdiem()"></td>
+    </tr>
+</table>
+<br>
+<table>
+    <tr>
+        <td>Bài 2: ĐỔI NHIỆT ĐỘ</td>
+    </tr>
+    <tr>
+        <td><input id="ndid" name="nd" type="number" placeholder="Nhiệt độ oC"> oC</td>
+    </tr>
+    <tr>
+        <td style="text-align: left"><input name="submit2" type="submit" value="Đổi nhiệt độ" onclick="doind()"></td>
+    </tr>
+</table>
+<br>
+<table>
+    <tr>
+        <td>Bài 3,4: TÍNH DIỆN TÍCH, CHU VI HÌNH TRÒN</td>
+    </tr>
+    <tr>
+        <td><input name="R" id="R" type="number" placeholder="Nhập bán kính hình tròn"> m</td>
+    </tr>
+    <tr>
+        <td><input name="submit3" type="submit" value="Tính S, P hình tròn" onclick="tkq()"></td>
+    </tr>
+    <br>
+    <tr>
+        <td><div id="kq1" style="text-align: left"></div></td>
+    </tr>
+    <tr>
+        <td><div id="kq2" style="text-align: left"></div></td>
+    </tr>
+</table>
+</body>
+</html>
+<script>
+    function tinhdiem(){
+        t = parseInt(document.getElementById("toanid").value)
+        l = parseInt(document.getElementById("lyid").value)
+        h = parseInt(document.getElementById("hoaid").value)
+        a = ((t+l+h)/3).toFixed(2)
+        b = t+l+h
+        alert("Điểm trung bình 3 môn toán, lý, hóa là : " + a + " điểm \n" + "Điểm tổng 3 môn toán, lý, hóa là : " + b + " điểm")
+    }
+    function doind(){
+        of = parseInt(document.getElementById("ndid").value) * 9/5 + 32
+        alert(of + " Fahrenheit")
+    }
+    function tkq(){
+        r = parseInt(document.getElementById("R").value)
+        s = (Math.pow(r,2) * Math.PI).toFixed(2)
+        p = (2 * r * Math.PI).toFixed(2)
+        document.getElementById("kq1").innerHTML ="Chu vi hình tròn : " + p + " m"
+        document.getElementById("kq2").innerHTML = "Diện tích hình tròn : " + s + " m2"
+    }
+</script
+</body>
+</html>
