@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính đơn giản</title>
+    <style>
+        tr td button{
+            width: 50px;
+            height: 50px;
+        }
+        .result{
+            width:97.2%;
+            height:30px;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <tr>
+        <td colspan="4" style="text-align: right; height:30px; border: solid black 1px">
+            <span id="result"></span>
+            <input class="result" type="text" id="view">
+
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button type="button" value="1" onclick="inputVaLue(this.value)">1</button>
+        </td>
+        <td>
+            <button type="button" value="2" onclick="inputVaLue(this.value)">2</button>
+        </td>
+        <td>
+            <button type="button" value="3" onclick="inputVaLue(this.value)">3</button>
+        </td>
+        <td>
+            <button type="button" value="+" onclick="inputVaLue(this.value)">+</button>
+        </td>
+        <tr>
+        <td>
+            <button type="button" value="4" onclick="inputVaLue(this.value)">4</button>
+        </td>
+        <td>
+            <button type="button"  value="5" onclick="inputVaLue(this.value)">5</button>
+        </td>
+        <td>
+            <button type="button" value="6" onclick="inputVaLue(this.value)">6</button>
+        </td>
+        <td>
+            <button type="button" value="-" onclick="inputVaLue(this.value)">-</button>
+        </td>
+    </tr>
+        <tr>
+        <td>
+            <button type="button" value="7" onclick="inputVaLue(this.value)">7</button>
+        </td>
+        <td>
+            <button type="button" value="8" onclick="inputVaLue(this.value)">8</button>
+        </td>
+        <td>
+            <button type="button" value="9" onclick="inputVaLue(this.value)">9</button>
+            </td>
+        <td>
+            <button type="button" value="*" onclick="inputVaLue(this.value)">*</button>
+        </td>
+        </tr>
+    <tr>
+        <td>
+            <button type="button" value="AC" onclick="inputVaLue(this.value)">AC</button>
+            </td>
+        <td>
+            <button type="button" value="0" onclick="inputVaLue(this.value)">0</button>
+        </td>
+        <td>
+            <button type="button" value="=" onclick="Caculator();">=</button>
+        </td>
+        <td>
+            <button type="button" value="/" onclick="inputVaLue(this.value)">/</button>
+        </td>
+    </tr>
+</table>
+<script>
+    let result = document.getElementById("view")
+    function inputVaLue(value){
+        result.value+=value;
+        // result = result + value;
+    }
+    function Caculator(){
+        let returnValue = eval(result.value);
+        result.value=returnValue;
+    }
+    function inputVaLue(value){
+        switch(value){
+            case '0' :
+            case '1' :
+            case '2' :
+            case '3' :
+            case '4' :
+            case '5' :
+            case '6' :
+            case '7' :
+            case '8' :
+            case '9' :
+            case '+' :
+            case '-' :
+            case '*' :
+            case '/' :
+            case ' = ':
+                result = result + i;
+                break;
+            case '=':
+                result = eval(result)
+                break;
+            case'AC':
+                result ='';
+                break;
+        }
+result=document.getElementById('inputValue(this.Value)').innerText;
+    }
+</script>
+</body>
+</html>

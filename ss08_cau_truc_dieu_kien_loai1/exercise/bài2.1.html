@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển từ độ C sang độ F</title>
+</head>
+<body>
+<h2>Chuyển từ độ C sang độ F</h2>
+<input type="number" id="Celcius" placeholder="Nhập độ C">
+<button onclick="check()">Kiểm tra</button>
+<p id="result"></p>
+<script>
+  function check() {
+    let C = parseFloat(document.getElementById("Celcius").value);
+    let F = C * 9 / 5 + 32
+    Result = C + " °C =" + F + " °F";
+    document.getElementById("result").innerHTML = Result;
+  }
+</script>
+</body>
+</html>

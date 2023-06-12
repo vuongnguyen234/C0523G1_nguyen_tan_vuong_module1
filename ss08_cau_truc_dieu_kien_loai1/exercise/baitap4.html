@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="a" placeholder="Nhập số a">
+<input type="number" id="b" placeholder="Nhập số b">
+<button type="button" value="kiem_tra" onclick="check">Check</button>
+<p id="result"></p>
+<script>
+    function result(){
+        a = parseFloat(document.getElementById("a").value);
+        b = parseFloat(document.getElementById("b").value)
+        if (a % b == 0){
+            result = a + ` chia hết cho ` + b;
+        } else {
+            result = a + ` không chia hết cho ` + b;
+        }
+        document.getElementById("result").innerHTML = result;
+    }
+</script>
+</body>
+</html>

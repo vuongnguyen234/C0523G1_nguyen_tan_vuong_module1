@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích hình chữ nhật</title>
+</head>
+<body>
+<h2> Tính diện tích hình chữ nhật</h2>
+<input type="number" id="chieudai_a" placeholder="Nhập chiều dài">
+<input tupe="number" id="chieurong_b" placeholder="Nhập chiều rộng">
+<button onclick="check()">Tính S</button>
+<p id="result"></p>
+<script>
+  let a =parseFloat(prompt("Nhập chiều dài: "));
+  let b =parseFloat(prompt("Nhập chiều rộng: "));
+  c = a * b
+  document.getElementById("result").innerText = c;
+</script>
+</body>
+</html>
