@@ -10,15 +10,12 @@
 <button type="button" value="kiem_tra" onclick="check">Check</button>
 <p id="result"></p>
 <script>
-    function result(){
-        a = parseFloat(document.getElementById("a").value);
-        b = parseFloat(document.getElementById("b").value)
-        if (a % b == 0){
-            result = a + ` chia hết cho ` + b;
-        } else {
-            result = a + ` không chia hết cho ` + b;
-        }
-        document.getElementById("result").innerHTML = result;
+    let a = +prompt("Nhập số a:")
+    let b = +prompt("Nhập số b:")
+    if (a % b == 0) {
+        alert ("a chia hết cho b")
+    } else {
+        alert ("a không chia hết cho b")
     }
 </script>
 </body>
