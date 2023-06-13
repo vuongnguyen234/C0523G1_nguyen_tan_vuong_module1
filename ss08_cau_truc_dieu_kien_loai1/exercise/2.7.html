@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="number" placeholder="Nhập a" id="numA"> </br>
+<br>
+    <input type="number" placeholder="Nhập b" id="numB"> </br>
+<br>
+    <input type="number" placeholder="Nhập c" id="numC"> </br>
+<br>
+    <button id="call" onclick="tinhnghiem()">Kết quả</button>
+<script>
+        function tinhnghiem() {
+        let a = +parseFloat(document.getElementById("numA").value);
+        let b = +parseFloat(document.getElementById("numB").value);
+        let c = +parseFloat(document.getElementById("numC").value);
+        let delta = [Math.pow(b,2) - (4 * a * c)];
+        if (delta === 0) {
+        x = [-b / (2 * a)]
+        alert("Phuong trinh co nghiem kep: " +x);
+    } if (delta < 0)
+        alert("Delta < 0, phuong trinh vo nghiem");
+        else {
+        x1 = [(-b + Math.pow(delta, 2)) / 2 * a]
+        x2 = [(-b - Math.pow(delta, 2)) / 2 * a]
+        alert("Phuong trinh co 2 nghiem la: " +x1 +x2);
+    }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tính tiền điện tháng 6 </h1>
+<h2>Biết 1 số đồng hồ điện = 3000</h2>
+<input type="number" id="dienbandau" placeholder=" Số đồng hồ điện ban đầu "><br>
+<br>
+<input type="number" id="dienhientai" placeholder=" Số đồng hồ điện hiện tại "><br>
+<br>
+<input type="button" onclick="tinhtiendienphaitra()" value="Tính tiền điện">
+<p id="result"></p>
+<script>
+    function tinhtiendienphaitra() {
+        let a = +parseFloat(document.getElementById("dienbd").value);
+        let b = +parseFloat(document.getElementById("dienht").value);
+        let ketqua = ( b - a ) * 3000
+        document.getElementById("result").innerHTML  = "Số tiền điện phải trả " +ketqua +" Đ" ;
+    }
+</script>
+</body>
+</html>

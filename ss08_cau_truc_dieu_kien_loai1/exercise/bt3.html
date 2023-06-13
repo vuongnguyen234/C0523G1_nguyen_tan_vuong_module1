@@ -72,7 +72,7 @@
             <button type="button" value="0" onclick="inputVaLue(this.value)">0</button>
         </td>
         <td>
-            <button type="button" value="=" onclick="Caculator();">=</button>
+            <button type="button" value="=" onclick="Caculator">=</button>
         </td>
         <td>
             <button type="button" value="/" onclick="inputVaLue(this.value)">/</button>
@@ -81,11 +81,7 @@
 </table>
 <script>
     let result = document.getElementById("view")
-    function inputVaLue(value){
-        result.value+=value;
-        // result = result + value;
-    }
-    function Caculator(){
+    function caculator(){
         let returnValue = eval(result.value);
         result.value=returnValue;
     }
