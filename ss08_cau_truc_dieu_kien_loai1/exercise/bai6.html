@@ -1,53 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body>
-<h1>Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng</h1>
-<table>
-    <thead>Nhập vào doanh số của bạn theo từng quý</thead>
-    <tr>
-        <td>Quý</td>
-        <td>Quý I</td>
-        <td>Quý II</td>
-        <td>Quý III</td>
-        <td>Quý IV</td>
-    </tr>
-    <tr>
-        <td>Doanh số (đơn vị: VND)</td>
-        <td><input type="number" id="quy1"></td>
-        <td><input type="number" id="quy2"></td>
-        <td><input type="number" id="quy3"></td>
-        <td><input type="number" id="quy4"></td>
-    </tr>
-</table>
-<p>Tiền hoa hồng bằng 5% tổng doanh thu</p>
-<button onclick="doing()">Kiểm tra</button>
-<button type="reset">Nhập lại từ đầu</button>
-<p id="result"></p>
+</body>
+<h2>Tính hoa hồng nhận được tuỳ theo mức doanh thu bán hàng </h2>
+<input type="text" id="tienhoahong" placeholder="Doanh số bán hàng ">
+<button onclick="tienhoahong()">Tính tiền hoa hồng</button>
+<p id="ketqua"></p>
 <script>
-    function doing() {
-        let a = parseFloat(document.getElementById("quy1").value);
-        let b = parseFloat(document.getElementById("quy2").value);
-        let c = parseFloat(document.getElementById("quy3").value);
-        let d = parseFloat(document.getElementById("quy4").value);
-        let total = (a + b + c + d);
-        if (total > 100000000) {
-            total = (total*0.1);
-            alert("doanh thu nam nay cua ban la: " +total);
-        }
-        if (total <= 100000000) {
-            total = (total*0.07);
-            alert("doanh thu nam nay cua ban la: " +total);
-        }
-        if (total < 50000000) {
-            total = (total * 0.05);
-            alert("doanh thu nam nay cua ban la: " +total);
-            // document.getElementById("result") = total;
-        }
+    function tienhoahong() {
+        let hoahong1 = parseFloat(document.getElementById("tienhoahong").value);
+        let hh = ( hoahong1 * 0.1 )
+        document.getElementById("ketqua").innerHTML =("số tiền hoa hồng của bạn là " + hh +  "k" )
     }
 </script>
-</body>
-</html>

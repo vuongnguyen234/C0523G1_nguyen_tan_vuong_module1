@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game đoán số</title>
+</head>
+<body>
+<button onclick="gamedoanso()">Play</button>
+<script>
+    function gamedoanso() {
+        let min = +prompt("Nhập số nhỏ nhất: ");
+        let max = +prompt("Nhập số lớn nhất ");
+        let random = Math.round(Math.random()*(max - min) + min);
+        console.log(random)
+        let i = 1;
+        do {
+            let inputNum = +prompt("Bạn hãy nhập vào số bạn thích ");
+            if(inputNum > random){
+                alert("Bạn cần nhập số lớn hơn, còn " + (3 -i) + " lần nhập. ")
+            } else if (inputNum < random){
+                alert("Bạn cần nhập số bé hơn, còn " + (3 -i) + " lần nhập. ")
+            } else {
+                alert("Chúc mừng bạn")
+                break;
+            }
+            i++
+        } while (i <= 3)
+    }
+</script>
+</body>
+</html>
