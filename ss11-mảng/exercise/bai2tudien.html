@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="str">Nhập từ</label>
+<input type="text" name id="str">
+<button onclick="transcript()">Dịch từ</button>
+<p id="result"></p>
+<script>
+    function transcript(){
+        let english= ["play game", "soccer", "hello","walking","apple","book"];
+        let vietnam= ["chơi trò chơi","đá bóng ", "xin chào","đi bộ","táo", "sách"];
+        let str = document.getElementById("str").value;
+        let index_english =-1;
+        let result="";
+        for (let i=0; i<english.length;i++){
+            if (str == english[i]){
+                index_english =i;
+                break;
+            }
+        }
+        if (index_english!=-1){
+            result=vietnam[index_english]
+        } else {
+            result="Không tìm thấy từ"
+        }
+        document.getElementById("result").innerHTML= result;
+    }
+</script>
+</body>
+</html>

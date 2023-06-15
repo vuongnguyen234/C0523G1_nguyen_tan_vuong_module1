@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+<script>
+let arr='n'
+let UP=["ABCDEFGHIJKLMN"];
+let DOWN=["abcdefghijklmn"];
+let result=[];
+for( let i=1; i<arr.length;i++){
+    if(UP.indexOf(arr[i])!==-1){
+        result.push(arr[i].DOWN());
+    }else
+        if(DOWN.indexOf(arr[i])!==-1)
+        {
+            result.push(arr[i].Up());
+        }else{
+            result.push(arr[i]);
+        }
+} console.log(result.join(''));
+</script>
+</body>
+</html>
