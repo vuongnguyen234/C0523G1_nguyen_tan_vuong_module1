@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = ['a', 'b', 'C', 'd', 'e', 'F', 7, 9, 13, 17, 22];
+    let size = array.length;
+    document.write('Cho mot chuoi co gia tri la: ' + array);
+    document.write('</br>');
+
+    let count = 0;
+    for (let i = 0; i < array.length; i++) {
+        if (isNaN(array[i])) {
+            count++;
+        }
+    } alert("Số lượng phần tử là ký tự: " + count);
+
+</script>
+</body>
+</html>
