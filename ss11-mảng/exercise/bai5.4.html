@@ -5,11 +5,15 @@
     <title>Đảo ngược</title>
 </head>
 <body>
+<h2>Đảo ngược các phần tử trong mảng số nguyên</h2>
+<button onclick="reverseArr()">Đảo ngược mảng số nguyên</button>
+<p id="result"></p>
 <script>
-    let number = prompt("Nhập số bạn muốn đổi ngược");
-    number = number.split('');
-    let rev = number.reverse();
-    alert ("Dãy số đảo ngược là: " + rev);
+    let myArray = [7, 15, 34, 48, 55, 66, 78,88,98];
+    function reverseArr() {
+        myArray.reverse();
+        document.getElementById("result").innerHTML = myArray ;
+    }
 </script>
 </body>
 </html>
