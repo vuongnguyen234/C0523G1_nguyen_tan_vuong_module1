@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num = [12, 23, 34, 45, 56, 65, 76, 87, 98, 100];
+    let newArray = +prompt('Enter số nguyên V:');
+    let flag = true;
+    for (let i = 0; i < num.length; i++) {
+        if (newArray === num[i]) {
+            flag = false;
+            num.splice(i,1);
+            num.push(0);
+        }
+    }
+    document.write(num);
+</script>
+</body>
+</html>
