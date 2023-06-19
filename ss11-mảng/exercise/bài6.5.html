@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<script>
+    let a = prompt('Nhập chuỗi 1 ');
+    let b = prompt('Nhập chuỗi 2');
+    a = a.split(' ');
+    b = b.split(' ');
+    document.write('<br/> a: ' + a.join(' '))
+    document.write('<br/> b : ' + b.join(' ') + '<br/>')
+    let check = 0;
+    for (let i = 0; i < a.length; i++) {
+        for (let j = 0; j < b.length; j++) {
+            if (a[i] === b[j]) {
+                check++;
+            }
+        }
+    }
+    if (check !== 0) {
+        document.write(" Chuỗi %s và chuỗi %s là giống nhau:")
+    } else {
+        document.write(" Chuỗi %s và chuỗi %s là khác nhau")
+    }
+</script>
+</body>
+</html>
