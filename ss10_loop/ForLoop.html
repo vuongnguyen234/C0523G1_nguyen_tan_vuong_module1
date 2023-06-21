@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    <!--    Xuất hiện 5 từ hello-->
+    for (let i = 1; i <= 5; i++) {
+        document.write("Hello<br/>")
+    }
+    //let i = 0 ; 0 < 5 => true => Hello
+    // i = 1; 1 < 5 => true => Hello
+    //i = 2 => 2 < 5 => true => Hello
+    //i = 3 => 3 < 5 => true => Hello
+    //i = 4 => 4 < 5 => true => Hello
+    //i = 5 => 5 < 5 => false Thoát khỏi vòng lặp
+
+    // Xuất ra từ 1, ... n, với n được nhập từ bạn phím
+    // let n = +prompt("Mời bạn nhập vào n")
+    // for(let i = 1; i <= n; i++) {
+    //     document.write(i + " ")
+    // }
+
+    //Xuất ra các số chẵn từ 2, ... n
+    // let n = +prompt("Mời bạn nhập vào n")
+    // for(let i = 1; i <= n / 2; i++) {
+    //     // if(n / 2) {
+    //         document.write(2 * i + " ")
+    //     // }
+    // }
+
+    let n = +prompt("Mời bạn nhập vào n")
+    // for(let i = 1; i <= n; i++) {
+    //    if(i % 2 == 0) {
+    //        document.write(i + " ")
+    //    }
+    // }
+
+    for (let i = 2; i <= n; i += 2) {
+        document.write(i + " ");
+    }
+</script>
+</body>
+</html>

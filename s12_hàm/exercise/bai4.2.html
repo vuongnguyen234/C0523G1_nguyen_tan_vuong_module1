@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function circleArea(r) {
+    let a = r * r * 3.14;
+    let s=a.toFixed(2)
+    return s;
+  }
+  function circleCircumference(r) {
+    let b = r * 2 * 3.14;
+    let c=b.toFixed(2)
+    return c;
+  }
+  let a = +prompt("Nhập bán kính hình tròn");
+  document.write("Diện tích hình tròn là: " + circleArea(a) + '<br/>');
+  document.write("Chu vi hình tròn là: " + circleCircumference(a));
+</script>
+</body>
+</html>
