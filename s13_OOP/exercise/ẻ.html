@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // khởi tạo một đối tượng trực tiếp
+
+    // tạo class bằng function
+    let Student = function(id, name, age){
+        this.id= id;
+        this.name = name;
+        this.age = age;
+        this.school ="BK"
+        this.study =function (subject) {
+            console.log("đang học môn : "+ subject);
+        }
+    }
+    let student2 = new Student(2,"Thắng",30);
+    let student3 = new Student(3,"Liên", 20);
+    student2.study("Java");
+    student3.study("Hoá")
+    // tạo class bằng từ khoá class
+    class SinhVien{
+        constructor(ma,ten,tuoi) {
+            this.ma = ma;
+            this.ten =ten;
+            this.tuoi =tuoi;
+        }
+        getTen(){
+            return this.ten;
+        }
+        setTen(ten){
+            this.ten = ten;
+        }
+        study(subject){
+            console.log("đang học môn : "+ subject);
+        }
+    }
+    let sinhVien2 = new SinhVien(2,"Thắng",30);
+    let sinhVien3 = new SinhVien(3,"Liên", 20);
+    console.log(sinhVien2.getTen())
+    sinhVien2.setTen("Chánh");
+    console.log(sinhVien3.getTen())
+
+    //
+    let student1 = {
+        id : 1,
+        name : "chánh",
+        age: 38,
+        study : function (subject) {
+            console.log("đang học môn : "+ subject);
+        }
+    }
+    console.log("Tên sinh viên "+ student1.name)
+    console.log("Tuổi sinh viên "+ student1.age)
+    student1.age =30;
+    console.log("Tên sinh viên "+ student1.name)
+    console.log("Tuổi sinh viên "+ student1.age)
+    student1.study("JS")
+</script>
+</body>
+</html>
+</body>
+</html>
