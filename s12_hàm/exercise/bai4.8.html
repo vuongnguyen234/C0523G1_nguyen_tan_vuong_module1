@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function change(arr) {
+        let newArr = [];
+        let index = 0;
+        for (let i = arr.length-1; i >= 0; i--) {
+            newArr[index] = arr[i];
+            index++;
+        } return newArr;
+    }
+    let n = +prompt("Độ dài mảng số nguyên:");
+    let num = [];
+    for (let j = 0; j < n; j++) {
+        num[j] = +prompt("Nhập vào số nguyên thứ " + (j + 1));
+    }
+    alert("Mảng số nguyên của bạn là: " + num);
+    alert("Đảo ngược sẽ là: " + change(num));
+
+</script>
+</body>
+</html>
