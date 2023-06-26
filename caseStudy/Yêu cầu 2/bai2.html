@@ -2,18 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Bài 2</title>
 </head>
 <body>
 <script>
-    let h =+ prompt("Nhập chiều cao của h:");
+    let h = +prompt('Nhập vào chiều cao h của tam giác');
 
     for (let row = 0; row < h; row++) {
-        for (let column = 0; column < h; column++) {
-            if (column === 0 || column === row || row === h -1 ) {
-                document.write('*');
-            } else {
+        for (let column = 0; column <= h * 2; column++) {
+            if (h - row > column || h + row < column) {
                 document.write('&nbsp&nbsp');
+            } else {
+                document.write('*');
             }
         }
         document.write('</br>');
