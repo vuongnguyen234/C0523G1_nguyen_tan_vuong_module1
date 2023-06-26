@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let a = +prompt("Nhập lương tháng của bạn vào");
+        let i =0;
+        if (a > 15000000) {
+            i = 0.2;
+        }else if (a>=7000000) {
+            i = 0.1;
+        }else{
+            i =0.05;
+        }
+        let c= a*(1-i);
+        alert("Số tiền lương sau thuế của bạn : " + c);
+</script>
+</body>
+</html>
